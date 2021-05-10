@@ -1,0 +1,14 @@
+name: dream_car
+title: dream_car
+username:
+account: aumb
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4111163
+bundleId: 4583325
+url: https://aumb.shinyapps.io/dream_car/
+when: 1620687707.45227
+lastSyncTime: 1620687707.45227
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: sorry.jpg

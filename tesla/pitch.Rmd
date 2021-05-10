@@ -1,0 +1,45 @@
+---
+title: "Can you afford your dream car?"
+author: "Aum Brahmbhatt"
+date: "5/10/2021"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Explanation
+- This app predicts if you can afford you dream car or not. 
+- The prediction cannot be made without knowing your salary, MSRP of your dream car, and your debt to income ration. 
+- The prediction also tell you whats the most expensive car you can buy. 
+
+## Documentation
+- Please replace the default numbers with the numbers that suits you. 
+- PLEASE ONLY ENTER NUMERIC VALUES. 
+- I define debt to income ratio as: Ration between all the expenses(including food, rent/house mortgage, etc) and the net income after the tax. 
+- I assume that car mortgage would be 2% of the car MSRP, plus the mortgage would last for 60 months. 
+- Lastly, I am aslo assuming that you are willing to spend all the income after expenses on the car mortgage for next 60 months!
+
+## Magic Code
+- This is the code that does all the magic!
+- This code shows the calculation based on which it predicts if you can afford your car or not!
+```{r comment="", echo = TRUE, eval = TRUE}
+income <- 2500
+ratio <- 25
+price <- 93749
+income <- income * (1-(ratio/100))
+mortgage <- (price * 0.02)
+price <- income/0.02
+if(income > mortgage){
+    outputText <- paste("CONGRATULATIONS! YOU CAN AFFORD YOUR DREAM CAR. You can buy car as expensive as", price)
+}else{
+    outputText<- paste("SORRY! UNFORTUNATELY YOU CAN AFFORD A CAR WITH MSRP ", price)
+}
+outputText
+```
+
+## Conclusion
+- Hope you liked my simple app. 
+- Thank for you reading along!
+- I hope you can afford your dream car!
